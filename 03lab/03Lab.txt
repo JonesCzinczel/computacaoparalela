@@ -1,0 +1,12 @@
+Luan
+21
+1.69
+Jones
+23
+1.83
+Ariel
+20
+1.70
+Leonardo
+19
+1.70
