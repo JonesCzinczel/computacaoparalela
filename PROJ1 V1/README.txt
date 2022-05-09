@@ -1,0 +1,23 @@
+==========> GRUPO MACKENZIE <==========
+
+Alunos:
+Luan Lemos - 32085109 
+Jones Czinczel - 32089041
+
+=======> Descricão <=======
+
+O programa foi compilado em GCC! 
+
+O Projeto foi baseado no site que o Professor passou (https://hpc-tutorials.llnl.gov/posix/), pdfs e nas aulas; realizamos a atividade e acreditamos ter atingido o objetivo desejado.
+
+=======> Compilar <=======
+
+Para utilizar o programa:
+1º Crie a .bin dos codigos utilizando o comando gcc Projeto_pthread.c -o Projeto_pthread / gcc Projeto_Serial.c -o Projeto_Serial.
+
+2º Etapa executamos o programa com o comando ./Projeto_pthread.c*/ | ./Projeto_Serial.c*/ e com isso conseguirá rodar o programa. 
+
+=======> Considerações <=======
+
+Usamos o número destinado ao dado para fazer a divisão da série de Taylor pela quantidade de threads. Ao fim do código ele irá printar o tempo que levou para ser executar e faz a comparação com tempo serial e o resultado de tudo isso é o speedup.
+
