@@ -21,3 +21,24 @@ Para utilizar o programa:
 
 Usamos o número destinado ao dado para fazer a divisão da série de Taylor pela quantidade de threads. Ao fim do código ele irá printar o tempo que levou para ser executar e faz a comparação com tempo serial e o resultado de tudo isso é o speedup.
 
+
+====> Resultado serial <====
+
+Result: 5.19
+Execution Time: 0.084000
+
+
+====> Resultado pthread <====
+
+ Hello from thread 0 of 3.816 - sum of Taylor - 
+ Hello from thread 1 of 4.499 - sum of Taylor - 
+ Hello from thread 2 of 4.901 - sum of Taylor - 
+ Hello from thread 3 of 5.187 - sum of Taylor - Execution Time w/ 2 parallel threads: 0.519000
+
+=======> Calculo <=======
+Resultado Pthread = 0,519000
+Resultado Serial = 0.084000
+
+0,084000/0,519000 = 0,16184
+
+Speedup = 0,16184

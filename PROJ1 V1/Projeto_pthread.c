@@ -43,7 +43,7 @@ int main(int argc, char *argv[])
     return 0;
 }
 
-void *taylor(void *rank)
+void *Taylor(void *rank)
 {
     long my_rank = (long)rank;
     int thread_partition = (T / thread_count);
@@ -55,7 +55,7 @@ void *taylor(void *rank)
         sum += 1 / i;
     }
 
-    printf("\n Hello from thread %ld of %d - sum of Taylor - ", my_rank, thread_count);
+    printf("\n Hello from thread %ld of %.3f - sum of Taylor - ", my_rank, sum);
 
     return NULL;
 }
