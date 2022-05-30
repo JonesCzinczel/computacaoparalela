@@ -3,7 +3,8 @@
 #include <omp.h>
 
 void Taylor(double *rank); /* Thread function */
-#define T 1000000000
+
+#define T 10000000000
 
 int main(int argc, char *argv[])
 {
@@ -23,18 +24,22 @@ int main(int argc, char *argv[])
 void Taylor(double *rank)
 {
     long my_rank = omp_get_thread_num();
-    int thread_count = omp_get_num_threads();
-    int num = (my_rank * (T / thread_count)) + 1;
-    int condition = num + (T / thread_count);
-    double sum = 0.0;
 
-    for (double i = num; i < condition; i++)
+    int thread_count = omp_get_num_threads();
+
+    int val = (my_rank * (T / thread_count)) + 1;
+
+    int cond = val + (T / thread_count);
+
+    double soma = 0.0;
+
+    for (double i = val; i < cond; i++)
     {
-        sum += 1 / i;
+        soma += 1 / i;
     }
 
 #pragma omp critical
-    *rank += sum;
+    *rank += soma;
 
-    printf("\n Hello from thread %ld of %.3f ", my_rank, sum);
+    printf("\n Hello from thread %ld of %.3f ", my_rank, soma);
 }

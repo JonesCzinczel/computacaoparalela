@@ -11,7 +11,7 @@ int thread_count;
 void *Taylor(void *rank); /* Thread function */
 
 int T = 100;
-double sum = 0;
+double soma = 0.0;
 
 int main(int argc, char *argv[])
 {
@@ -46,16 +46,19 @@ int main(int argc, char *argv[])
 void *Taylor(void *rank)
 {
     long my_rank = (long)rank;
-    int thread_partition = (T / thread_count);
-    int num = (my_rank * thread_partition) + 1;
-    int finnum = (num + thread_partition);
 
-    for (double i = num; i < finnum; i++)
+    int thread_partition = (T / thread_count);
+
+    int val = (my_rank * thread_partition) + 1;
+
+    int finval = (val + thread_partition);
+
+    for (double i = val; i < finval; i++)
     {
-        sum += 1 / i;
+        soma += 1 / i;
     }
 
-    printf("\n Hello from thread %ld of %.3f - sum of Taylor - ", my_rank, sum);
+    printf("\n Hello from thread %ld of %.3f - sum of Taylor - ", my_rank, soma);
 
     return NULL;
 }

@@ -1,12 +1,9 @@
-// Aluno: Luan Lemos Tia: 32085109
-// Aluno: Jones Czinczel Tia: 32089041
-
 #include <stdio.h>
 #include <time.h>
 
 int main(void)
 {
-    float sum = 0;
+    float soma = 0;
     clock_t t;
 
     int T = 100;
@@ -14,10 +11,10 @@ int main(void)
 
     for (float i = 1; i <= T; i++)
     {
-        sum += (1 / i);
+        soma += (1 / i);
     }
 
-    printf("Result: %.2f\n", sum);
+    printf("Result: %.2f\n", soma);
 
     t = clock() - t;
 

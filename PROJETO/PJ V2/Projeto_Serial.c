@@ -3,18 +3,18 @@
 
 #include <stdio.h>
 
-#define T 10000000
+#define T 10000000000
 
 int main(void)
 {
-    double sum = 0;
+    double soma = 0;
 
     for (double i = 1; i <= T; i++)
     {
-        sum += (1 / i);
+        soma += (1 / i);
     }
 
-    printf("Result: %.4f\n", sum);
+    printf("Result: %.4f\n", soma);
 
     return 0;
 }
